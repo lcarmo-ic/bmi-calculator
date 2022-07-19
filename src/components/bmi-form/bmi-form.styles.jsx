@@ -4,6 +4,8 @@ import { handleTextColorByCategory, handleInputColorByCategory } from '../../uti
 export const CustomInput = styled.input`
     line-height: 75px;
     font-size: 50px;
+    height: 90px;
+    width: 100%;
     color: #ffffff;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
@@ -23,15 +25,40 @@ export const CustomInput = styled.input`
         -webkit-appearance: none;
         margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
     }
+
+    @media screen and (max-width: 800px) {
+        line-height: 100%;
+        font-size: 5vw;
+        height: 100%;
+        grid-template-rows: repeat(2, 1fr);
+        min-width: 0%;
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 `
 
 export const FormContainer = styled.div`
-    position: fixed;
     width: 90vw;
-    margin: 10px auto;
-    left: 5.1vw;
-    bottom: 0px;
+    height: 15vh;
+    position: relative;
+    top: 50%;
+    margin-top: -7.5vh;
+    left: 5vw;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
+
+    @media screen and (max-width: 800px) {
+        display: grid;
+        width: 100%;
+        min-width: 0;
+        left: 0;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 10%;
+        position: relative;
+        top: 50%;
+        margin-top: -7.5vh;
+    }
 `

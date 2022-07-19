@@ -3,14 +3,25 @@ import { Link } from "react-router-dom";
 import { handleTextColorByCategory, handleIconColorFilter } from '../../utils/utils'
 
 export const CategoryContainer = styled.div`
-    text-align: center;
+    height: 20vh;
+    width: 100%;
+    position: relative;
+    top: 0;
+
+    @media screen and (max-width: 800px) {
+        top: 0;
+    }
 `
 
 export const CategoryLink = styled(Link)`
     position: flex;
     color: ${({ category }) => handleTextColorByCategory(category)};
-    font-size: 30px;
+    font-size: 3vw;
     text-decoration: none;
+
+    @media screen and (max-width: 800px) {
+        font-size: 5vw;
+    }
 `
 
 export const RedirectIcon = styled.img`

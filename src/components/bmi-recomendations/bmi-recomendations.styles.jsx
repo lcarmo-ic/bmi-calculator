@@ -53,17 +53,26 @@ export const ParagraphText = styled.p`
 
 export const BMICalculatorLink = styled(Link)`
     display: flex;
-    width: 14%;
+    max-width: 11vw;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: ${({ category }) => handleInputColorByCategory(category)};
     border-radius: 10px;
-    color: black;
     text-decoration: none;
     position: sticky;
-    left: 20px;
-    padding-left: 50px;
-    padding-right: 5px;
+    left: 0.5vw;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
     bottom: 2%;
     color: white;
+
+    @media screen and (max-width: 800px) {
+    display: flex;
+    max-width: 14vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    bottom: 2%;
+    }
 `

@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import BMIForm from "../bmi-form/bmi-form.component";
 import BMIDisplay from "../bmi-display/bmi-display.component";
-import {Title} from "./home.styles.jsx"
+import {TitleContainer, Title, BMIInfoContainer, BMIFormContainer, ScreenGrid, BMIInfoGrid} from "./home.styles.jsx"
 import BmiError from "../bmi-error/bmi-error.component";
 import { useSelector } from "react-redux";
 import { GlobalStyle } from '../../global-style.styles';
@@ -14,11 +14,21 @@ const Home = () => {
     return (
         <Fragment>
             <GlobalStyle category={category} isBlog={false}/>
-            <Title category={category} >BMI Calculator</Title>
-            <BMIDisplay></BMIDisplay>
-            <BMICategory></BMICategory>
+            <ScreenGrid>
+                <TitleContainer>
+                    <Title category={category} >BMI Calculator</Title>
+                </TitleContainer>
+                <BMIInfoContainer>
+                    <BMIInfoGrid>
+                        <BMIDisplay></BMIDisplay>
+                        <BMICategory></BMICategory>
+                    </BMIInfoGrid>
+                </BMIInfoContainer>
+                <BMIFormContainer>
+                    <BMIForm></BMIForm>
+                </BMIFormContainer>
+            </ScreenGrid>
             <BmiError></BmiError>
-            <BMIForm></BMIForm>
         </Fragment>
     )
 }
