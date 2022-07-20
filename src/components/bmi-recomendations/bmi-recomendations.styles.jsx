@@ -15,6 +15,10 @@ export const HeaderContainer = styled.div`
 export const HeaderLabel = styled.label`
     color: white;
     font-size: 48px;
+
+    @media screen and (max-width: 800px) {
+        font-size: 10vw;
+    }
 `
 
 export const BlogContainer = styled.div`
@@ -31,6 +35,10 @@ export const BlogTitle = styled.h1`
  color: black 65%;   
  padding-top: 15px;
  margin-bottom: 45px;
+
+ @media screen and (max-width: 800px) {
+        font-size: 6vw;
+    }
 `
 
 export const CategoryLabel = styled.label`
@@ -42,13 +50,23 @@ export const BlogSubTitle = styled.h2`
     font-weight: bold;
     font-size: 22px;
     margin-bottom: 35px;
+
+    @media screen and (max-width: 800px) {
+        font-size: 6vw;
+    }
 `
 export const ParagraphSubtitle = styled.h3`
     color: ${({ category }) => handleInputColorByCategory(category)};
+    @media screen and (max-width: 800px) {
+        font-size: 5vw;
+    }
 `
 
 export const ParagraphText = styled.p`
     color: black;
+    @media screen and (max-width: 800px) {
+        font-size: 4vw;
+    }
 `
 
 export const BMICalculatorLink = styled(Link)`
@@ -74,5 +92,6 @@ export const BMICalculatorLink = styled(Link)`
     padding-left: 2.5vw;
     padding-right: 2.5vw;
     bottom: 2%;
+    font-size: 2vw;
     }
 `
